@@ -1,7 +1,7 @@
 parameters_ctc = {}
 
 
-
+parameters_ctc['RESOURCES_base_directory'] = "/content/data_ctc"
 
 parameters_ctc['train_file']="/content/data_ctc/train.tsv"
 parameters_ctc['test_file']="/content/data_ctc/test.tsv"
