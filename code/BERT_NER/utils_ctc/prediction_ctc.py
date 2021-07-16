@@ -27,7 +27,7 @@ from collections import Counter
 from torch.optim import lr_scheduler
 
 
-fasttext_model = fasttext.load_model('/data/jeniya/STACKOVERFLOW_DATA/POST_PROCESSED/fasttext_model/fasttext.bin')
+fasttext_model = fasttext.load_model('/content/drive/MyDrive/StackOverflowNER/fasttext.bin')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 if device=='cuda':
