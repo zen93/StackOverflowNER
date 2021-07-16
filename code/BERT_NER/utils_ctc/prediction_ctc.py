@@ -34,12 +34,12 @@ if device=='cuda':
     torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 RESOURCES = {
-    "train": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/train_freq.txt",
-    "gigaword_word": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/gigaword_gt_2.bin",
-    "gigaword_char": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/gigaword_char_unique.bin",
-    "stackoverflow_char": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/no_eng_char_uniq.bin",
-    "stackoverflow_word": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/words.bin",
-    "cs": "/data/jeniya/STACKOVERFLOW_DATA/CTC/data/sorted_semantic_scholar_words.txt"
+    "train": "/content/drive/MyDrive/StackOverflowNER/data_ctc/train_freq.txt",
+    "gigaword_word": "/content/drive/MyDrive/StackOverflowNER/data_ctc/gigaword_gt_2.bin",
+    "gigaword_char": "/content/drive/MyDrive/StackOverflowNER/data_ctc/gigaword_char_unique.bin",
+    "stackoverflow_char": "/content/drive/MyDrive/StackOverflowNER/data_ctc/no_eng_char_uniq.bin",
+    "stackoverflow_word": "/content/drive/MyDrive/StackOverflowNER/data_ctc/words.bin",
+    "cs": "/content/drive/MyDrive/StackOverflowNER/data_ctc/sorted_semantic_scholar_words.txt"
 }
 
 def eval(predictions, gold_labels, phase):
