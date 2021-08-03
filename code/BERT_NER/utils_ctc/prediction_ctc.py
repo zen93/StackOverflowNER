@@ -296,7 +296,7 @@ if __name__ == '__main__':
     train_file=parameters_ctc['train_file']
     test_file=parameters_ctc['test_file']
 
-    ctc_classifier, vocab_size, word_to_id, id_to_word, word_to_vec, features= train_model(train_file, test_file)
+    ctc_classifier, vocab_size, word_to_id, id_to_word, word_to_vec, features= train_ctc_model(train_file, test_file)
     print(word_to_id)
     ip_token = "app"
     op_ctc = prediction_on_token_input(ip_token, ctc_classifier, vocab_size, word_to_id, id_to_word, word_to_vec, features)
