@@ -377,11 +377,12 @@ def load_and_cache_examples(args, tokenizer, labels, pad_token_label_id, mode, p
 
 
 def parse_args():
+    cwd = os.getcwd()
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
         "--input_file_for_segmenter",
-        default='./utils_fine_tune/ip_seg/dev.txt',
+        default=os.path.join(cwd, '/utils_fine_tune/ip_seg/dev.txt'),
         type=str,
     )
 
@@ -396,7 +397,7 @@ def parse_args():
 
     parser.add_argument(
         "--data_dir",
-        default='./utils_fine_tune/ip_seg/',
+        default=os.path.join(cwd,'/utils_fine_tune/ip_seg/'),
         type=str,
         help="The input data dir. Should contain the training files for the CoNLL-2003 NER task.",
     )
@@ -408,13 +409,13 @@ def parse_args():
     )
     parser.add_argument(
         "--model_name_or_path",
-        default='./utils_fine_tune/word_piece_seg/',
+        default=os.path.join(cwd+'/utils_fine_tune/word_piece_seg/'),
         type=str,
         help="Path to pre-trained model or shortcut name selected in the list: " + ", ".join(ALL_MODELS),
     )
     parser.add_argument(
         "--output_dir",
-        default='./utils_fine_tune/bert-word-piece-seg/',
+        default=os.path.join(cwd, '/utils_fine_tune/bert-word-piece-seg/'),
         type=str,
         help="The output directory where the model predictions and checkpoints will be written.",
     )
@@ -422,7 +423,7 @@ def parse_args():
     # Other parameters
     parser.add_argument(
         "--labels",
-        default='./utils_fine_tune/labels_seg.txt',
+        default=os.path.join(cwd, '/utils_fine_tune/labels_seg.txt'),
         type=str,
         help="Path to a file containing all labels. If not specified, CoNLL-2003 labels are used.",
     )
