@@ -60,7 +60,13 @@ def get_word_dict_pre_embeds(train_file, test_file):
     id_to_word={}
     word_to_id={}
     word_to_vec={}
-
+    word="**UNK**" # Unknown token
+    
+    word_to_id[word]=word_id
+    id_to_word[word_id]=word
+    word_to_vec[word]=fasttext_model[word]
+    word_id+=1
+    
     for line in open(train_file):
         word=line.split()[0]
         if word not in word_to_id:
