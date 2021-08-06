@@ -377,7 +377,8 @@ def load_and_cache_examples(args, tokenizer, labels, pad_token_label_id, mode, p
 
 
 def parse_args():
-    cwd = os.getcwd()
+    #cwd = os.getcwd()
+    cwd = '/content/drive/MyDrive/StackOverflowNER/StackOverflowNER/code/BERT_NER'
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
