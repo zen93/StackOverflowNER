@@ -410,13 +410,25 @@ def parse_args():
     )
     parser.add_argument(
         "--model_name_or_path",
-        default=os.path.join(cwd, 'utils_fine_tune', 'word_piece_seg', ''),
+        default=os.path.join(
+#             cwd, 
+#             'utils_fine_tune', 
+#             'word_piece_seg',
+              'jeniya/BERTOverflow',
+#             ''
+        ),
         type=str,
         help="Path to pre-trained model or shortcut name selected in the list: " + ", ".join(ALL_MODELS),
     )
     parser.add_argument(
         "--output_dir",
-        default=os.path.join(cwd, 'utils_fine_tune', 'bert-word-piece-seg', ''),
+        default=os.path.join(
+#             cwd,
+#             'utils_fine_tune', 
+#             'bert-word-piece-seg',
+              'jeniya/BERTOverflow',
+#             ''
+        ),
         type=str,
         help="The output directory where the model predictions and checkpoints will be written.",
     )
