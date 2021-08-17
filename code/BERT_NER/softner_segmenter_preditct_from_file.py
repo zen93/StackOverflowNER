@@ -436,7 +436,7 @@ def parse_args():
     # Other parameters
     parser.add_argument(
         "--labels",
-        default=os.path.join(cwd, 'utils_fine_tune', 'labels_seg.txt'),
+        default=os.path.join(cwd, 'utils_fine_tune', 'labels_so.txt'), # Changed from labels_seg.txt to labels_so.txt
         type=str,
         help="Path to a file containing all labels. If not specified, CoNLL-2003 labels are used.",
     )
